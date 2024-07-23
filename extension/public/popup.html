@@ -1,0 +1,28 @@
+<html>
+  <head>
+    <script
+      src="https://unpkg.com/htmx.org@2.0.1"
+      integrity="sha384-QWGpdj554B4ETpJJC9z+ZHJcA/i59TyjxEPXiiUgN2WmTyV5OEZWCD6gQhgkdpB/"
+      crossorigin="anonymous"
+    ></script>
+    <link rel="stylesheet" href="index.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap"
+      rel="stylesheet"
+    />
+    <meta name="htmx-config" content='{"selfRequestsOnly":false}' />
+  </head>
+  <body>
+    <div class="container">
+      <div
+        id="tabs"
+        hx-get="http://localhost:42000/notes"
+        hx-trigger="load delay:100ms"
+        hx-target="#tabs"
+        hx-swap="innerHTML"
+      ></div>
+    </div>
+  </body>
+</html>

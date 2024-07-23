@@ -1,0 +1,65 @@
+html * {
+  color: #000 !important;
+  font-family: Montserrat !important;
+}
+
+.container {
+  width: 400px;
+  padding: 6px;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.menu-container {
+  display: flex;
+  justify-content: space-evenly;
+  gap: 10px;
+}
+
+.menu-button {
+  padding: 6px;
+  padding-left: 12px;
+  padding-right: 12px;
+  border-radius: 12px;
+  border: none;
+  opacity: 50%;
+  cursor: pointer;
+  width: 150px;
+}
+
+.menu-button:hover {
+  background-color: lightblue;
+  color: whitesmoke;
+  box-shadow: 3px 3px 3px grey;
+  opacity: 100%;
+  font-weight: bold;
+  transition-duration: 0.5s;
+  letter-spacing: 1px;
+}
+
+.menu-button:not(:hover) {
+  transition-duration: 0.7s;
+}
+
+.note-container {
+  height: fit-content;
+  display: flex;
+  justify-content: left;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.notes {
+  width: 100%;
+  height: 350px;
+  border-radius: 6px;
+  padding: 12px;
+  resize: none;
+  border: 1px solid;
+}
+
+.tags {
+  width: fit-content;
+  border-radius: 6px;
+}
