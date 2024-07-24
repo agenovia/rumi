@@ -4,7 +4,7 @@ const createNotesPage = () => /*html*/ `
         <button
           class="selected"
         >
-          Notes
+          Relay
         </button>
         <button
           class="menu-button"
@@ -13,7 +13,7 @@ const createNotesPage = () => /*html*/ `
           hx-target="#tab-content"
           hx-swap="innerHTML"
         >
-          Summarize
+          Recap
         </button>
         <button
           class="menu-button"

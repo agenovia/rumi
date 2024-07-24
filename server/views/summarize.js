@@ -8,12 +8,12 @@ const createSummarizePage = () => /*html*/ `
           hx-target="#tab-content"
           hx-swap="innerHTML"
         >
-          Notes
+          Relay
         </button>
         <button
           class="selected"
         >
-          Summarize
+          Recap
         </button>
         <button
           class="menu-button"
