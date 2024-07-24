@@ -2,6 +2,7 @@ import express from "express";
 import morgan from "morgan";
 import createNotesPage from "./views/notes.js";
 import cors from "cors";
+import createSummarizePage from "./views/summarize.js";
 
 const app = express();
 // configure CORS
@@ -12,8 +13,16 @@ app.use(cors());
 app.use(morgan("combined"));
 app.use(express.urlencoded({ extended: false }));
 
-app.get("/notes", function (req, res) {
+app.get("/home", (req, res) => {
   res.send(createNotesPage());
+});
+
+app.get("/notes", (req, res) => {
+  res.send(createNotesPage());
+});
+
+app.get("/summarize", (req, res) => {
+  res.send(createSummarizePage());
 });
 
 app.listen(42000, () => {

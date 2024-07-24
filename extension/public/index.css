@@ -6,6 +6,7 @@ html * {
 .container {
   width: 400px;
   padding: 6px;
+  padding-right: 18px;
   display: flex;
   flex-direction: column;
   gap: 12px;
@@ -42,7 +43,8 @@ html * {
   transition-duration: 0.7s;
 }
 
-.note-container {
+
+.content {
   height: fit-content;
   display: flex;
   justify-content: left;

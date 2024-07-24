@@ -1,10 +1,6 @@
 <html>
   <head>
-    <script
-      src="https://unpkg.com/htmx.org@2.0.1"
-      integrity="sha384-QWGpdj554B4ETpJJC9z+ZHJcA/i59TyjxEPXiiUgN2WmTyV5OEZWCD6gQhgkdpB/"
-      crossorigin="anonymous"
-    ></script>
+    <script src="htmx.min.js"></script>
     <link rel="stylesheet" href="index.css" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -12,15 +8,48 @@
       href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap"
       rel="stylesheet"
     />
-    <meta name="htmx-config" content='{"selfRequestsOnly":false}' />
+    <meta
+      charset="utf-8"
+      name="htmx-config"
+      content='{"selfRequestsOnly":false}'
+    />
   </head>
   <body>
     <div class="container">
+      <div class="menu-container">
+        <button
+          class="menu-button"
+          hx-trigger="click"
+          hx-get="http://localhost:42000/notes"
+          hx-target="#tab-content"
+          hx-swap="innerHTML"
+        >
+          Notes
+        </button>
+        <button
+          class="menu-button"
+          hx-trigger="click"
+          hx-get="http://localhost:42000/summarize"
+          hx-target="#tab-content"
+          hx-swap="innerHTML"
+        >
+          Summarize
+        </button>
+        <button
+          class="menu-button"
+          hx-trigger="click"
+          hx-get="http://localhost:42000/recall"
+          hx-target="#tab-content"
+          hx-swap="innerHTML"
+        >
+          Recall
+        </button>
+      </div>
       <div
-        id="tabs"
-        hx-get="http://localhost:42000/notes"
+        id="tab-content"
+        hx-get="http://localhost:42000/home"
         hx-trigger="load delay:100ms"
-        hx-target="#tabs"
+        hx-target="#tab-content"
         hx-swap="innerHTML"
       ></div>
     </div>
