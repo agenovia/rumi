@@ -6,7 +6,7 @@ html * {
 .container {
   width: 400px;
   padding: 6px;
-  padding-right: 18px;
+  padding-right: 12px;
   display: flex;
   flex-direction: column;
   gap: 12px;
@@ -31,8 +31,7 @@ html * {
 
 .menu-button:hover {
   background-color: lightblue;
-  color: whitesmoke;
-  box-shadow: 3px 3px 3px grey;
+  box-shadow: 3px 3px 6px grey;
   opacity: 100%;
   font-weight: bold;
   transition-duration: 0.5s;
@@ -43,13 +42,18 @@ html * {
   transition-duration: 0.7s;
 }
 
-
-.content {
-  height: fit-content;
-  display: flex;
-  justify-content: left;
-  flex-direction: column;
-  gap: 12px;
+.selected {
+  background-color: lightblue;
+  box-shadow: 3px 3px 6px grey;
+  opacity: 100%;
+  font-weight: bold;
+  letter-spacing: 1px;
+  padding: 6px;
+  padding-left: 12px;
+  padding-right: 12px;
+  border-radius: 12px;
+  border: none;
+  width: 150px;
 }
 
 .notes {
@@ -64,4 +68,22 @@ html * {
 .tags {
   width: fit-content;
   border-radius: 6px;
+}
+
+@keyframes fadein {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+.content {
+  height: fit-content;
+  display: flex;
+  justify-content: left;
+  flex-direction: column;
+  gap: 12px;
+  animation: fadein 0.3s ease-in;
 }

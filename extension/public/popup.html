@@ -15,43 +15,12 @@
     />
   </head>
   <body>
-    <div class="container">
-      <div class="menu-container">
-        <button
-          class="menu-button"
-          hx-trigger="click"
-          hx-get="http://localhost:42000/notes"
-          hx-target="#tab-content"
-          hx-swap="innerHTML"
-        >
-          Notes
-        </button>
-        <button
-          class="menu-button"
-          hx-trigger="click"
-          hx-get="http://localhost:42000/summarize"
-          hx-target="#tab-content"
-          hx-swap="innerHTML"
-        >
-          Summarize
-        </button>
-        <button
-          class="menu-button"
-          hx-trigger="click"
-          hx-get="http://localhost:42000/recall"
-          hx-target="#tab-content"
-          hx-swap="innerHTML"
-        >
-          Recall
-        </button>
-      </div>
-      <div
-        id="tab-content"
-        hx-get="http://localhost:42000/home"
-        hx-trigger="load delay:100ms"
-        hx-target="#tab-content"
-        hx-swap="innerHTML"
-      ></div>
-    </div>
+    <div
+      id="tab-content"
+      hx-get="http://localhost:42000/home"
+      hx-trigger="load delay:100ms"
+      hx-target="#tab-content"
+      hx-swap="innerHTML"
+    ></div>
   </body>
 </html>
