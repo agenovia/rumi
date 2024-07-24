@@ -1,12 +1,14 @@
 {
   "manifest_version": 3,
   "name": "Rumi: Remembers",
-  "description": "Rumi is a lightweight note-taking extension powered by an LLM.",
+  "description": "Rumi is a lightweight note-taking extension for recording, recapping and recalling your ideas using AI.",
   "version": "1.0",
   "action": {
     "default_popup": "public/popup.html",
     "default_icon": "images/icon.png"
   },
   "host_permissions": ["http://127.0.0.1:42000/*", "http://localhost:42000/*"],
-  "homepage_url": "http://127.0.0.1"
+  "icons": {
+    "48": "images/icon.png"
+  }
 }
