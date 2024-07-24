@@ -1,8 +1,8 @@
 import express from "express";
 import morgan from "morgan";
-import createNotesPage from "./views/notes.js";
+import createRecordPage from "./views/record.js";
 import cors from "cors";
-import createSummarizePage from "./views/summarize.js";
+import createRecapPage from "./views/recap.js";
 
 const app = express();
 // configure CORS
@@ -14,15 +14,15 @@ app.use(morgan("combined"));
 app.use(express.urlencoded({ extended: false }));
 
 app.get("/home", (req, res) => {
-  res.send(createNotesPage());
+  res.send(createRecordPage());
 });
 
-app.get("/notes", (req, res) => {
-  res.send(createNotesPage());
+app.get("/record", (req, res) => {
+  res.send(createRecordPage());
 });
 
-app.get("/summarize", (req, res) => {
-  res.send(createSummarizePage());
+app.get("/recap", (req, res) => {
+  res.send(createRecapPage());
 });
 
 app.listen(42000, () => {
