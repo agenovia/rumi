@@ -1,6 +1,6 @@
 # Remi: Remembers
 <p align="center">
-<img src="https://github.com/agenovia/rumi/blob/main/extension/images/icon.png"></img>
+<img src="https://github.com/agenovia/remi/blob/main/extension/images/icon.png"></img>
 </p>
 
 ## Credits
