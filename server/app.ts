@@ -5,10 +5,6 @@ import Vault from "./auth/vault.js";
 import { default as v1 } from "./routes/v1/router.js";
 
 const app = express();
-// configure CORS
-const corsOptions = {
-  origin: ["http://localhost", "http://lagenovia.hpsj.com"],
-};
 app.use(cors());
 app.use(morgan("combined"));
 app.use(express.urlencoded({ extended: false }));
